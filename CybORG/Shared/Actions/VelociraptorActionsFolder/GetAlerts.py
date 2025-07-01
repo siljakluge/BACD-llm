@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Enums import QueryType
+from CybORG import QueryType
 from CybORG.Shared.Observation import Observation
 
 from .VelociraptorAction import VelociraptorAction

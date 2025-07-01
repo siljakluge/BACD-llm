@@ -18,8 +18,8 @@ from CybORG.Shared.Actions.ConcreteActions.JuicyPotato import JuicyPotato
 from CybORG.Shared.Actions.ConcreteActions.V4L2KernelExploit import V4L2KernelExploit
 from CybORG.Shared.Enums import (
         OperatingSystemType, TrinaryEnum)
-from CybORG.Simulator.State import State
-from CybORG.Simulator.Session import Session
+from CybORG.Simulator import State
+from CybORG.Simulator import Session
 
 # pylint: disable=too-few-public-methods
 class EscalateActionSelector(ABC):

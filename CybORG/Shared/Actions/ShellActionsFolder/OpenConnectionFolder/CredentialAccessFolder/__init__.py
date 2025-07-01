@@ -1,2 +1,2 @@
-from .BruteForceAccessFolder import SSHHydraBruteForce
-from .SSHAccess import SSHAccess
+from CybORG.Shared.Actions.ShellActionsFolder.OpenConnectionFolder.CredentialAccessFolder.BruteForceAccessFolder import SSHHydraBruteForce
+from CybORG.Shared.Actions.ShellActionsFolder.OpenConnectionFolder.CredentialAccessFolder.SSHAccess import SSHAccess

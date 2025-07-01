@@ -14,5 +14,5 @@ from .GetUserNTDS import GetUserNTDS
 from .KillProcessName import KillProcessName
 from .KillProcessPID import KillProcessPID
 from .VelociraptorDisableUser import VelociraptorDisableUser
-from .GetAlerts import GetAlerts
+from CybORG.Shared.Actions.VelociraptorActionsFolder.GetAlerts import GetAlerts
 from .VelociraptorSleep import VelociraptorSleep

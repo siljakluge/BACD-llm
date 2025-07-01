@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.MSFActionsFolder.RemoteCodeExecutionFolder.RemoteCodeExecution import RemoteCodeExecution
+from CybORG import RemoteCodeExecution
 
 
 class RubyOnRails(RemoteCodeExecution):

@@ -1,4 +1,4 @@
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG import BaseAgent
 import random
 import math
 

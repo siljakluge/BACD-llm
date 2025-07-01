@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import MSFAction
+from CybORG import MSFAction
 
 
 class RemoteCodeExecution(MSFAction):

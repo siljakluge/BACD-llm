@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.ShellActionsFolder.ServiceManipulationFolder.ServiceManipulation import ServiceManipulation
+from CybORG import ServiceManipulation
 
 
 class ShellStopService(ServiceManipulation):

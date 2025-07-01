@@ -3,18 +3,12 @@
 
 # tests need to check that a range of inputs result in the correct changes to the state and return the correct obs
 # tests should establish varying environmental states that results in these actions performing differently
-from ipaddress import IPv4Network, IPv4Address
 
 from CybORG import CybORG
 import inspect
 
 from CybORG.Shared.Actions.GreenActions.GreenPortScan import GreenPortScan
-from CybORG.Shared.Actions import Monitor
 from CybORG.Agents.SimpleAgents.BlueMonitorAgent import BlueMonitorAgent
-
-from CybORG.Shared.Enums import TrinaryEnum, ProcessType, ProcessState, SessionType, OperatingSystemType, OperatingSystemDistribution, OperatingSystemVersion, Architecture
-from CybORG.Tests.EphemeralPort import Win2008EphemeralPort
-import pytest
 
 def process_connections(obs, local_address, remote_address, ports):
     # Don't know how to get expected remote port, so use this function to compare other data

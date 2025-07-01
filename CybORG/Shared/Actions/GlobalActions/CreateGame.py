@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared import Observation, Scenario
+from CybORG import Observation, Scenario
 
 from CybORG.Emulator.Config import EmulatorConfig
 

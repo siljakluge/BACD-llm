@@ -12,10 +12,10 @@ from typing import Tuple
 from CybORG.Shared import Observation
 from CybORG.Shared.Actions.ConcreteActions.ConcreteAction import ConcreteAction
 from CybORG.Shared.Enums import OperatingSystemType, DecoyType
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.Process import Process
-from CybORG.Simulator.Session import Session
-from CybORG.Simulator.State import State
+from CybORG.Simulator import Host
+from CybORG.Simulator import Process
+from CybORG.Simulator import Session
+from CybORG.Simulator import State
 
 class EscalateAction(ConcreteAction):
     """

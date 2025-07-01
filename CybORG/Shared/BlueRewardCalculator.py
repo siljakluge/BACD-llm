@@ -1,6 +1,6 @@
 from collections import namedtuple
 
-from CybORG.Shared import Scenario
+from CybORG import Scenario
 from CybORG.Shared.RedRewardCalculator import DistruptRewardCalculator, PwnRewardCalculator
 from CybORG.Shared.RewardCalculator import RewardCalculator
 

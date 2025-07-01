@@ -2,7 +2,7 @@ import inspect
 import random
 
 from CybORG import CybORG
-from CybORG.Agents.SimpleAgents.KeyboardAgent import KeyboardAgent
+from CybORG import KeyboardAgent
 import pytest
 
 

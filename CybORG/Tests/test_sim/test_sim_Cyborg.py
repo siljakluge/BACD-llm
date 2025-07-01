@@ -19,7 +19,7 @@ from CybORG.Agents.Wrappers import FixedFlatWrapper
 from CybORG.Agents.Wrappers.IntListToAction import IntListToActionWrapper
 from CybORG.Agents.Wrappers.OpenAIGymWrapper import OpenAIGymWrapper
 from CybORG.Agents.training_example import run_training_example
-from CybORG.Simulator.SimulationController import SimulationController
+from CybORG.Simulator import SimulationController
 from CybORG.Tests.utils import compare_fundamental_observations
 import pytest
 

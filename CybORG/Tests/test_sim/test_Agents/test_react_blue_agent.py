@@ -3,7 +3,7 @@ from ipaddress import IPv4Network
 
 from CybORG import CybORG
 from CybORG.Agents.SimpleAgents.BlueReactAgent import BlueReactRemoveAgent
-from CybORG.Shared.Actions import Impact, PrivilegeEscalate, ExploitRemoteService, DiscoverNetworkServices, \
+from CybORG.Shared.Actions import  PrivilegeEscalate, ExploitRemoteService, DiscoverNetworkServices, \
     DiscoverRemoteSystems
 from CybORG.Shared.Enums import TrinaryEnum, SessionType, ProcessType, ProcessState, OperatingSystemType
 from CybORG.Tests.EphemeralPort import LinuxEphemeralPort, Win2008EphemeralPort, PID

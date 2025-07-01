@@ -1,16 +1,15 @@
-import random
-from ipaddress import IPv4Address
 
-from CybORG.Shared import Observation
-from CybORG.Shared.Actions import Action
+
+from CybORG import Observation
+from CybORG import Action
 from CybORG.Shared.Actions.ConcreteActions.BlueKeep import BlueKeep
 from CybORG.Shared.Actions.ConcreteActions.EternalBlue import EternalBlue
 from CybORG.Shared.Actions.ConcreteActions.HTTPRFI import HTTPRFI
 from CybORG.Shared.Actions.ConcreteActions.HTTPSRFI import HTTPSRFI
 from CybORG.Shared.Actions.ConcreteActions.SSHBruteForce import SSHBruteForce
 from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import lo
-from CybORG.Simulator.Session import GreenAbstractSession
-from CybORG.Simulator.State import State
+from CybORG.Simulator import GreenAbstractSession
+from CybORG.Simulator import State
 
 
 class GreenConnection(Action):

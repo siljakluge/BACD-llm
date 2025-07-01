@@ -1,6 +1,6 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import MSFAction
-from CybORG.Simulator.State import State
+from CybORG import MSFAction
+from CybORG.Simulator import State
 
 
 class MSFScanner(MSFAction):

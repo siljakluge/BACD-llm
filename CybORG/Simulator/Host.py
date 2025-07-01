@@ -2,27 +2,24 @@
 ## Additionally, we waive copyright and related rights in the utilized code worldwide through the CC0 1.0 Universal public domain dedication.
 import hashlib
 from copy import deepcopy
-from datetime import datetime
 
-from ipaddress import IPv4Network, IPv4Address
 from random import randrange
 from typing import Optional, List
 
 from CybORG.Shared.Enums import (
-        SessionType, OperatingSystemPatch, OperatingSystemKernelVersion,
+        OperatingSystemPatch, OperatingSystemKernelVersion,
         OperatingSystemVersion, DecoyType,
         OperatingSystemDistribution, OperatingSystemType
         )
 
-from CybORG.Simulator.Entity import Entity
-from CybORG.Simulator.File import File
-from CybORG.Simulator.Interface import Interface
-from CybORG.Simulator.LocalGroup import LocalGroup
-from CybORG.Simulator.MSFServerSession import MSFServerSession
-from CybORG.Simulator.Process import Process
-from CybORG.Simulator.Session import VelociraptorServer, RedAbstractSession, Session
+from CybORG.Simulator import Entity
+from CybORG.Simulator import File
+from CybORG.Simulator import Interface
+from CybORG.Simulator import MSFServerSession
+from CybORG.Simulator import Process
+from CybORG.Simulator import VelociraptorServer, RedAbstractSession, Session
 
-from CybORG.Simulator.User import User
+from CybORG.Simulator import User
 
 
 class Host(Entity):

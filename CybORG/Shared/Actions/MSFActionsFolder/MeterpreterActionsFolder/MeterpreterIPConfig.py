@@ -3,7 +3,7 @@ import re
 from ipaddress import IPv4Network
 
 from CybORG.Shared.Actions.MSFActionsFolder.MeterpreterActionsFolder.MeterpreterAction import MeterpreterAction
-from CybORG.Shared.Enums import OperatingSystemType, SessionType
+from CybORG.Shared.Enums import  SessionType
 from CybORG.Shared.Observation import Observation
 
 

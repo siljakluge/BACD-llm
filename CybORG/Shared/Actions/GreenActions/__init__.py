@@ -1,3 +1,3 @@
 from .GreenConnection import GreenConnection
 from .GreenPingSweep import GreenPingSweep
-from .GreenPortScan import GreenPortScan
+from CybORG.Shared.Actions.GreenActions.GreenPortScan import GreenPortScan

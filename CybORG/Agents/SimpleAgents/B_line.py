@@ -1,7 +1,7 @@
 import random
 
-from CybORG.Agents import BaseAgent
-from CybORG.Shared import Results
+from CybORG import BaseAgent
+from CybORG import Results
 from CybORG.Shared.Actions import PrivilegeEscalate, ExploitRemoteService, DiscoverRemoteSystems, Impact, \
     DiscoverNetworkServices, Sleep
 

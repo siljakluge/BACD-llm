@@ -1,8 +1,8 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.MSFActionsFolder.MeterpreterActionsFolder.MeterpreterAction import MeterpreterAction
+from CybORG import MeterpreterAction
 from CybORG.Shared.Enums import OperatingSystemType, SessionType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator.State import State
+from CybORG.Simulator import State
 
 
 # Call sysinfo from a meterpreter session - gives internal system information

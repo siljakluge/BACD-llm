@@ -1,20 +1,13 @@
 # Copyright DST Group. Licensed under the MIT license.
 import copy
 import inspect
-from ipaddress import IPv4Network
-from math import log2
-from random import sample, choice
 import yaml
 
 from CybORG import CybORG
-from CybORG.Shared.Actions import FindFlag, ShellSleep, SambaUsermapScript, UpgradeToMeterpreter, MSFEternalBlue, GetShell, \
-    PingSweep
 from CybORG.Shared.Actions.Action import Action
-from CybORG.Shared.Enums import FileType, TrinaryEnum
 from CybORG.Shared.EnvironmentController import EnvironmentController
 from CybORG.Shared.Observation import Observation
-from CybORG.Shared.Results import Results
-from CybORG.Simulator.State import State
+from CybORG.Simulator import State
 
 
 class SimulationController(EnvironmentController):

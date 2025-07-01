@@ -6,16 +6,16 @@ Implements misinformation actions for blue agents
 """
 # pylint: disable=invalid-name
 from random import choice
-from typing import Tuple, List, Optional
+from typing import  List, Optional
 from abc import ABC, abstractmethod
 from dataclasses import dataclass
 
 from CybORG.Shared import Observation
 from CybORG.Shared.Actions import Action
 from CybORG.Shared.Enums import DecoyType
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.Session import Session
-from CybORG.Simulator.State import State
+from CybORG.Simulator import Host
+from CybORG.Simulator import Session
+from CybORG.Simulator import State
 
 
 @dataclass

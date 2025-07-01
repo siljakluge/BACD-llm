@@ -1,6 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.ShellActionsFolder.InternalEnumerationFolder. \
-    InternalEnumeration import InternalEnumeration
+from CybORG import InternalEnumeration
 
 
 class HostInfoEnumeration(InternalEnumeration):

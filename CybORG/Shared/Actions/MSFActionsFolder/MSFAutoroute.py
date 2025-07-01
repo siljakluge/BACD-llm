@@ -4,7 +4,7 @@ from ipaddress import IPv4Network
 from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import MSFAction
 from CybORG.Shared.Enums import SessionType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator.State import State
+from CybORG.Simulator import State
 
 
 class MSFAutoroute(MSFAction):

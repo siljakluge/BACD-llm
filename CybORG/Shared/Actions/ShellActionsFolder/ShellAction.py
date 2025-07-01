@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.SessionAction import SessionAction
+from CybORG import SessionAction
 
 
 class ShellAction(SessionAction):

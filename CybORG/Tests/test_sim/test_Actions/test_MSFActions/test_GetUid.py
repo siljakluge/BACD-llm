@@ -4,7 +4,6 @@ import pytest
 
 from CybORG import CybORG
 from CybORG.Shared.Actions.MSFActionsFolder import GetUid
-from CybORG.Shared.Enums import BuiltInGroups
 
 
 @pytest.fixture()

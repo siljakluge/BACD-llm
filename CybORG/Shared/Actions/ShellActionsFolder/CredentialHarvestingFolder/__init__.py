@@ -1,2 +1,2 @@
-from .ReadPasswdFile import ReadPasswdFile
+from CybORG.Shared.Actions.ShellActionsFolder.CredentialHarvestingFolder.ReadPasswdFile import ReadPasswdFile
 from .ReadShadowFile import ReadShadowFile

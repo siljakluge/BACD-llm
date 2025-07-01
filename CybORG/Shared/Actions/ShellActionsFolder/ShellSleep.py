@@ -4,7 +4,7 @@ import time
 
 from CybORG.Shared import Observation
 
-from .ShellAction import ShellAction
+from CybORG.Shared.Actions.ShellActionsFolder.ShellAction import ShellAction
 
 
 class ShellSleep(ShellAction):

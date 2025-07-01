@@ -2,7 +2,6 @@
 
 # tests need to check that a range of inputs result in the correct changes to the state and return the correct obs
 # tests should establish varying environmental states that results in these actions performing differently
-from ipaddress import IPv4Network, IPv4Address
 
 import pytest
 
@@ -12,7 +11,6 @@ import inspect
 from CybORG.Shared.Actions import Remove, DiscoverRemoteSystems, DiscoverNetworkServices, ExploitRemoteService, \
     PrivilegeEscalate, Monitor
 from CybORG.Shared.Enums import SessionType, TrinaryEnum
-from CybORG.Tests.EphemeralPort import PID
 from CybORG.Tests.test_sim.test_Acceptance.test_reward_function import security_values
 
 @pytest.mark.parametrize("seed", [1, 22447, 3242, 4])

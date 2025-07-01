@@ -1,2 +1,2 @@
 from .Uname import Uname
-from .SystemInfo import SystemInfo
+from CybORG.Shared.Actions.ShellActionsFolder.InternalEnumerationFolder.HostInfoEnumerationFolder.SystemInfo import SystemInfo

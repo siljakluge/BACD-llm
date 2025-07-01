@@ -1,3 +1,3 @@
 from .CredentialAccessFolder import SSHAccess, SSHHydraBruteForce
 from .NetcatConnect import NetcatConnect
-from .SMBAnonymousConnection import SMBAnonymousConnection
+from CybORG.Shared.Actions.ShellActionsFolder.OpenConnectionFolder.SMBAnonymousConnection import SMBAnonymousConnection

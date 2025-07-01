@@ -2,7 +2,7 @@
     
 # tests need to check that a range of inputs result in the correct changes to the state and return the correct obs
 # tests should establish varying environmental states that results in these actions performing differently
-from ipaddress import IPv4Network, IPv4Address    
+from ipaddress import IPv4Network
     
 from CybORG import CybORG    
 import inspect

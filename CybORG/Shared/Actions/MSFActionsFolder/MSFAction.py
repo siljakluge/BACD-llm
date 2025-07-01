@@ -2,11 +2,10 @@
 from ipaddress import IPv4Address, IPv4Network
 
 from CybORG.Shared.Actions.SessionAction import SessionAction
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.Interface import Interface
-from CybORG.Simulator.MSFServerSession import MSFServerSession
-from CybORG.Simulator.Session import Session
-from CybORG.Simulator.State import State
+from CybORG.Simulator import Interface
+from CybORG.Simulator import MSFServerSession
+from CybORG.Simulator import Session
+from CybORG.Simulator import State
 from CybORG.Simulator.Subnet import Subnet
 
 lo_subnet = IPv4Network('127.0.0.0/8')

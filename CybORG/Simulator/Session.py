@@ -3,7 +3,7 @@
 from ipaddress import IPv4Address
 
 from CybORG.Shared.Enums import SessionType, OperatingSystemType
-from CybORG.Simulator.Entity import Entity
+from CybORG.Simulator import Entity
 
 
 class Session(Entity):

@@ -28,9 +28,8 @@ from CybORG.Shared.Actions.ShellActionsFolder.ShellPrivilegeEscalationFolder.She
 # Note if the netcat listener is run but no connection is made, the netcat listener should then be closed to end action
 from CybORG.Shared.Enums import FileType, AppProtocol
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator.File import File
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.State import State
+from CybORG.Simulator import File
+from CybORG.Simulator import State
 
 
 class LinuxKernelPrivilegeEscalation(ShellPrivilegeEscalation):

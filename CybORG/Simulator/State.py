@@ -1,7 +1,7 @@
 ## The following code contains work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.
 ## Additionally, we waive copyright and related rights in the utilized code worldwide through the CC0 1.0 Universal public domain dedication.
 import copy
-from datetime import datetime, timedelta
+from datetime import datetime
 from ipaddress import IPv4Network, IPv4Address
 from math import log2
 from random import sample, choice
@@ -9,9 +9,9 @@ from random import sample, choice
 from CybORG.Shared import Scenario
 from CybORG.Shared.Enums import SessionType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.Process import Process
-from CybORG.Simulator.Session import Session
+from CybORG.Simulator import Host
+from CybORG.Simulator import Process
+from CybORG.Simulator import Session
 from CybORG.Simulator.Subnet import Subnet
 
 

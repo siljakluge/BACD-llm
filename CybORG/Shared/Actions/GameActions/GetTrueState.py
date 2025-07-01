@@ -4,7 +4,7 @@ from ipaddress import IPv4Network, IPv4Address
 
 from CybORG.Shared import Observation, CybORGLogger
 
-from .GameAction import GameAction
+from CybORG.Shared.Actions.GameActions.GameAction import GameAction
 
 
 class GetTrueState(GameAction, CybORGLogger):

@@ -1,2 +1,2 @@
 from .LocalShellEcho import LocalShellEcho
-from .LocalShellSleep import LocalShellSleep
+from CybORG.Shared.Actions.LocalShellActions.LocalShellSleep import LocalShellSleep

@@ -2,7 +2,7 @@ import pytest
 
 from agent_fixtures import cyborg
 
-from CybORG.Agents import DebuggingAgent
+from CybORG import DebuggingAgent
 
 killchain = ['DiscoverRemoteSystems','DiscoverNetworkServices', 'ExploitRemoteService','PrivilegeEscalate']
 

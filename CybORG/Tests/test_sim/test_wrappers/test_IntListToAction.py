@@ -2,7 +2,7 @@ import inspect
 import random
 
 from CybORG import CybORG
-from CybORG.Agents.Wrappers.IntListToAction import IntListToActionWrapper
+from CybORG import IntListToActionWrapper
 
 
 def test_step_zeroes():

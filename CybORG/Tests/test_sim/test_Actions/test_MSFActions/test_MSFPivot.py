@@ -1,13 +1,11 @@
 import inspect
-from ipaddress import IPv4Address
 
 import pytest
 
 from CybORG import CybORG
 
-from CybORG.Shared.Enums import BuiltInGroups
 from CybORG.Shared.Observation import Observation
-from CybORG.Shared.Actions import MSFAutoroute, KillProcessLinux, MSFEternalBlue, MS17_010_PSExec
+from CybORG.Shared.Actions import MSFAutoroute, KillProcessLinux,  MS17_010_PSExec
 
 
 @pytest.fixture()

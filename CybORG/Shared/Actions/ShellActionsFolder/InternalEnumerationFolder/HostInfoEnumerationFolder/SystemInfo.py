@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.ShellActionsFolder.InternalEnumerationFolder.HostInfoEnumerationFolder.HostInfoEnumeration import HostInfoEnumeration
+from CybORG import HostInfoEnumeration
 from CybORG.Shared.Enums import OperatingSystemType
 from CybORG.Shared.Observation import Observation
 

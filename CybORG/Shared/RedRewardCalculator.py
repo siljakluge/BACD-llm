@@ -2,8 +2,6 @@
 from collections import namedtuple
 
 from CybORG.Shared import Scenario
-from CybORG.Shared.Actions import FindFlag, Impact
-from CybORG.Shared.Actions.Action import Action
 from CybORG.Shared.Enums import OperatingSystemType
 from CybORG.Shared.RewardCalculator import RewardCalculator
 

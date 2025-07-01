@@ -2,7 +2,6 @@
 import CybORG.Shared.Enums as CyEnums
 from CybORG.Shared.Enums import OperatingSystemType as ost
 from CybORG.Shared.Actions.VelociraptorActionsFolder.VelociraptorArtifactAction import VelociraptorArtifactAction
-from CybORG.Shared.Enums import QueryType
 from CybORG.Shared.Observation import Observation
 
 

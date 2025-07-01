@@ -6,13 +6,11 @@ import sys
 import yaml
 
 from CybORG.Shared import Scenario
-from CybORG.Shared.Actions.Action import Sleep, InvalidAction
-from CybORG.Shared.Enums import FileType, OperatingSystemType
+from CybORG.Shared.Actions.Action import  InvalidAction
 from CybORG.Shared.Results import Results
 from CybORG.Shared.Observation import Observation
-from CybORG.Shared.Actions import Action, FindFlag, Monitor
+from CybORG.Shared.Actions import Action,  Monitor
 from CybORG.Shared.AgentInterface import AgentInterface
-import CybORG.Agents
 
 
 class EnvironmentController:

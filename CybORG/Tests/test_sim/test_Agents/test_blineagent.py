@@ -1,12 +1,11 @@
 import inspect
-import random
 
 from CybORG import CybORG
-from CybORG.Agents import SleepAgent
+from CybORG import SleepAgent
 from CybORG.Agents.SimpleAgents.B_line import B_lineAgent
 from CybORG.Agents.SimpleAgents.BlueReactAgent import BlueReactRemoveAgent, BlueReactRestoreAgent
 from CybORG.Shared.Enums import TrinaryEnum
-from CybORG.Shared.Actions import Impact, Remove, Monitor, ExploitRemoteService
+from CybORG.Shared.Actions import Impact, Remove, Monitor
 from CybORG.Shared.Actions import Restore
 
 import pytest

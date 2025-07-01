@@ -1,11 +1,10 @@
 from random import choice
 
-from CybORG.Shared import Observation
-from .Monitor import Monitor
+from CybORG import Observation
 from CybORG.Shared.Actions import Action
 from CybORG.Shared.Actions.ConcreteActions.StopProcess import StopProcess
-from CybORG.Simulator.Session import VelociraptorServer
-from CybORG.Simulator.State import State
+from CybORG.Simulator import VelociraptorServer
+from CybORG.Simulator import State
 
 
 class Remove(Action):

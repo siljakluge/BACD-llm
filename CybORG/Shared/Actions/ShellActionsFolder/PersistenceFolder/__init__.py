@@ -1,1 +1,1 @@
-from .Schtasks import Schtasks
+from CybORG.Shared.Actions.ShellActionsFolder.PersistenceFolder.Schtasks import Schtasks

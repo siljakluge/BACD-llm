@@ -1,6 +1,6 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.ShellActionsFolder.ShellAction import ShellAction
-from CybORG.Simulator.State import State
+from CybORG import ShellAction
+from CybORG.Simulator import State
 
 
 class OpenConnection(ShellAction):

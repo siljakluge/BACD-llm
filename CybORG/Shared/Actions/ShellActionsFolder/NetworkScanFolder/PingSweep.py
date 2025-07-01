@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.ShellActionsFolder.NetworkScanFolder.NetworkScan import NetworkScan
+from CybORG import NetworkScan
 from CybORG.Shared.Observation import Observation
 
 

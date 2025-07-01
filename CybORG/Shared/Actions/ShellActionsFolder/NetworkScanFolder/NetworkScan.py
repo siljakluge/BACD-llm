@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.ShellActionsFolder.ShellAction import ShellAction
+from CybORG import ShellAction
 
 
 class NetworkScan(ShellAction):

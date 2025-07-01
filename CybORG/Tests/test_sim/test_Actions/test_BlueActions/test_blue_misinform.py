@@ -26,9 +26,9 @@ from CybORG.Shared.Actions import (
 )
 
 from CybORG.Shared.Actions.ConcreteActions.EscalateAction import EscalateAction
-from CybORG.Simulator.State import State
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.Process import Process
+from CybORG.Simulator import State
+from CybORG.Simulator import Host
+from CybORG.Simulator import Process
 
 from CybORG.Agents import B_lineAgent
 

@@ -1,10 +1,10 @@
 from ipaddress import IPv4Address
 
-from CybORG.Shared import Observation
+from CybORG import Observation
 from CybORG.Shared.Actions.ConcreteActions.ExploitAction import ExploitAction
-from CybORG.Simulator.Host import Host
-from CybORG.Simulator.Process import Process
-from CybORG.Simulator.State import State
+from CybORG.Simulator import Host
+from CybORG.Simulator import Process
+from CybORG.Simulator import State
 
 
 class RemoteCodeExecutionOnSMTP(ExploitAction):

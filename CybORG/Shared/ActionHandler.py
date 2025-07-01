@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Shared.Actions.Action import Action
+from CybORG import Action
 from CybORG.Shared.Observation import Observation
 
 

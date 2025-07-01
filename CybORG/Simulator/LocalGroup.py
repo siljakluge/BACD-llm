@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG.Simulator.Entity import Entity
+from CybORG import Entity
 
 
 class LocalGroup(Entity):

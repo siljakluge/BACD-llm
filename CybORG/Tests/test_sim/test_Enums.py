@@ -1,6 +1,6 @@
 import pytest
 
-from CybORG.Shared.Enums import TrinaryEnum
+from CybORG import TrinaryEnum
 
 
 @pytest.mark.parametrize(["value", "expected"], [(True, TrinaryEnum.TRUE), (False, TrinaryEnum.FALSE), (None, TrinaryEnum.UNKNOWN), ("No Idea", TrinaryEnum.UNKNOWN)])

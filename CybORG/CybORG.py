@@ -5,7 +5,7 @@ from typing import Any
 from CybORG.Shared import Observation, Results, CybORGLogger
 from CybORG.Shared.EnvironmentController import EnvironmentController
 
-from CybORG.Simulator.SimulationController import SimulationController
+from CybORG.Simulator import SimulationController
 
 
 class CybORG (CybORGLogger):

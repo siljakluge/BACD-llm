@@ -1,6 +1,6 @@
 import random
 
-from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
+from CybORG import BaseAgent
 from CybORG.Shared import Results
 from CybORG.Shared.Actions import Sleep, GreenPingSweep, GreenPortScan, GreenConnection
 

@@ -2,10 +2,8 @@
 from datetime import datetime
 
 from CybORG.Shared.Enums import FileType, FileVersion
-from CybORG.Simulator.Entity import Entity
-from CybORG.Simulator.LocalGroup import LocalGroup
-from CybORG.Simulator.User import User
-import enum
+from CybORG.Simulator import Entity
+from CybORG.Simulator import User
 
 
 class File(Entity):

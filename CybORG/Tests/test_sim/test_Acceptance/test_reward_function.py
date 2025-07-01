@@ -1,7 +1,7 @@
 import pytest
 import inspect
 
-from CybORG.Tests.test_sim.test_Acceptance.agent_fixtures import cyborg
+from CybORG import cyborg
 
 from CybORG import CybORG
 from CybORG.Agents import DebuggingAgent, BlueMonitorAgent

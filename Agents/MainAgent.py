@@ -1,10 +1,9 @@
 import copy
 
 from .PPOAgent import PPOAgent
-from .BlueSleepAgent import BlueSleepAgent
+from Agents.BlueSleepAgent import BlueSleepAgent
 import numpy as np
 import os
-import torch
 
 class MainAgent(PPOAgent):
     def __init__(self):

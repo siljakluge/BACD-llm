@@ -63,7 +63,7 @@ if __name__ == "__main__":
 
     print(f'using CybORG v{cyborg_version}, {scenario}\n')
     for num_steps in [100]: #, 50, 100
-        for red_agent in [B_lineAgent]: # B_lineAgent, RedMeanderAgent, SleepAgent
+        for red_agent in [RedMeanderAgent]: # B_lineAgent, RedMeanderAgent, SleepAgent
             cyborg = CybORG(path, 'sim', agents={'Red': red_agent})
             wrapped_cyborg = wrap(cyborg)
 

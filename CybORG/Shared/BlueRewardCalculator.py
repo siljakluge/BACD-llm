@@ -41,7 +41,7 @@ class ConfidentialityRewardCalculator(RewardCalculator):
         reward = -self.infiltrate_rc.calculate_reward(current_state, action, agent_observations, done)
         subnet_decomp = self._calculate_compromised_hosts()
         if reward != sum(subnet_decomp.values()):
-            print("mismatch")
+            print("mismatch", reward, sum(subnet_decomp.values()))
         return reward, subnet_decomp
 
 

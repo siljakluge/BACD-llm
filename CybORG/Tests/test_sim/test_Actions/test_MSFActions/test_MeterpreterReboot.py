@@ -3,7 +3,7 @@ import inspect
 import pytest
 
 from CybORG import CybORG
-from CybORG import MeterpreterReboot, GetUid
+from CybORG.Shared.Actions import MeterpreterReboot, GetUid
 
 
 @pytest.fixture()

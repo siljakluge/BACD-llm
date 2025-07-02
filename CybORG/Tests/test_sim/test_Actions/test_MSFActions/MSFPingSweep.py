@@ -1,7 +1,13 @@
 import inspect
+from ipaddress import IPv4Network, IPv4Address
+from pprint import pprint
 
 from CybORG import CybORG
-from CybORG import SSHLoginExploit, MeterpreterIPConfig, MSFPingsweep,  UpgradeToMeterpreter
+from CybORG.Shared.Actions import SSHLoginExploit, MeterpreterIPConfig, MSFPingsweep, MSFPortscan, UpgradeToMeterpreter, \
+    MSFAutoroute, MS17_010_PSExec
+from CybORG.Shared.Enums import OperatingSystemDistribution, OperatingSystemKernelVersion, OperatingSystemType, \
+    Architecture, SessionType, ProcessState, AppProtocol, ProcessType
+from CybORG.Tests.EphemeralPort import LinuxEphemeralPort, Win2008EphemeralPort
 
 def test_pingsweep():
     path = str(inspect.getfile(CybORG))

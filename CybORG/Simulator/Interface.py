@@ -1,7 +1,7 @@
 # Copyright DST Group. Licensed under the MIT license.
 from ipaddress import IPv4Address, IPv4Network
 
-from CybORG.Simulator import Entity
+from CybORG.Simulator.Entity import Entity
 
 
 class Interface(Entity):

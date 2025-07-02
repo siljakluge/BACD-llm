@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import ShellAction
+from CybORG.Shared.Actions.ShellActionsFolder.ShellAction import ShellAction
 
 
 class InternalEnumeration(ShellAction):

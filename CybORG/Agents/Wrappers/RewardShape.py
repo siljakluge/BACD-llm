@@ -1,6 +1,6 @@
 import torch
 from collections import deque
-from CybORG import Results
+from CybORG.Shared import Results
 from CybORG.Agents.Wrappers.BaseWrapper import BaseWrapper
 
 

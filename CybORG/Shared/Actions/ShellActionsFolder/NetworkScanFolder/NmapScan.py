@@ -1,11 +1,11 @@
 # Copyright DST Group. Licensed under the MIT license.
-from ipaddress import IPv4Address
+from ipaddress import IPv4Address, IPv4Network
 
 from CybORG.Shared.Actions.ShellActionsFolder.NetworkScanFolder.NetworkScan import NetworkScan
-from CybORG.Shared.Enums import FileType
+from CybORG.Shared.Enums import FileType, InterfaceType
 from CybORG.Shared.Observation import Observation
 
-# Scan IP 
+
 class NmapScan(NetworkScan):
     def __init__(self, session, agent, subnet):
         super().__init__(session, agent, subnet)

@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import BruteForceAccess
+from CybORG.Shared.Actions.ShellActionsFolder.OpenConnectionFolder.CredentialAccessFolder.BruteForceAccessFolder.BruteForceAccess import BruteForceAccess
 
 
 class SSHHydraBruteForce(BruteForceAccess):

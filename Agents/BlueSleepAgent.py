@@ -1,4 +1,4 @@
-from CybORG import BaseAgent
+from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
 
 class BlueSleepAgent(BaseAgent):
     def __init__(self):

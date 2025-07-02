@@ -1,2 +1,2 @@
 from .StartService import StartService
-from CybORG.Shared.Actions.ShellActionsFolder.ServiceManipulationFolder.ShellStopService import ShellStopService
+from .ShellStopService import ShellStopService

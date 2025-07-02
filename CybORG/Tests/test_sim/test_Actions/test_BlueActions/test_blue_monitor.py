@@ -5,6 +5,8 @@
 
 import inspect
 
+import pytest
+
 from CybORG import CybORG
 from CybORG.Shared.Actions import Monitor, DiscoverRemoteSystems, DiscoverNetworkServices, ExploitRemoteService, \
     PrivilegeEscalate, Impact

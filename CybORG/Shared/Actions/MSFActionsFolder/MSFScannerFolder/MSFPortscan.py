@@ -1,11 +1,11 @@
 # Copyright DST Group. Licensed under the MIT license.
-from ipaddress import IPv4Address
+from ipaddress import IPv4Address, IPv4Network
 
 from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import lo_subnet, lo
 from CybORG.Shared.Actions.MSFActionsFolder.MSFScannerFolder.MSFScanner import MSFScanner
-from CybORG.Shared.Enums import  SessionType
+from CybORG.Shared.Enums import InterfaceType, SessionType, ProcessType, ProcessVersion, AppProtocol
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.State import State
 
 # msf module is auxiliary/scanner/portscan/tcp
 class MSFPortscan(MSFScanner):

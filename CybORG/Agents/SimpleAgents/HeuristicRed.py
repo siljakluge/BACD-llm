@@ -1,5 +1,5 @@
 import random
-from CybORG import DiscoverRemoteSystems, DiscoverNetworkServices, ExploitRemoteService, PrivilegeEscalate, Impact
+from CybORG.Shared.Actions import DiscoverRemoteSystems, DiscoverNetworkServices, ExploitRemoteService, PrivilegeEscalate, Impact
 
 class HeuristicRed():
     def __init__(self, session=0, priority=None):

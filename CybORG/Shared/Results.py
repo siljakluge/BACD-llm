@@ -4,6 +4,7 @@ import pprint
 from copy import deepcopy
 
 from CybORG.Shared.Observation import Observation
+from CybORG.Tests.test_sim.test_Acceptance.test_reward_function import availability_values
 
 
 class Results:

@@ -1,7 +1,8 @@
 import pytest 
-from CybORG.Tests.test_sim.test_Actions.test_BlueActions.test_Deceptive_Actions.deceptive_action_fixtures import cyborg, params, obs_failure, red_killchain, HOSTNAMES, blue_spam
+from deceptive_action_fixtures import cyborg, params, obs_failure, red_killchain, HOSTNAMES, blue_spam
+import itertools 
 from CybORG.Shared.Actions import DecoyTomcat, HTTPSRFI
-from CybORG.Shared.Enums import  OperatingSystemType
+from CybORG.Shared.Enums import SessionType, OperatingSystemType, ProcessType, ProcessState
 from CybORG.Tests.EphemeralPort import Win2008EphemeralPort, LinuxEphemeralPort
 
 invalid_hosts = ['User3', 'User4','Enterprise1','Enterprise2']

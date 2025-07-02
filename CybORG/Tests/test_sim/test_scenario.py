@@ -1,4 +1,4 @@
-from CybORG import PrivilegeEscalate, MS17_010_PSExec, UpgradeToMeterpreter, SSHLoginExploit, \
+from CybORG.Shared.Actions import PrivilegeEscalate, MS17_010_PSExec, UpgradeToMeterpreter, SSHLoginExploit, \
     MeterpreterIPConfig, MSFAutoroute, MSFPingsweep, MSFPortscan, GetFileInfo, GetProcessList, GetProcessInfo, \
     VelociraptorPoll, GetLocalGroups, GetUsers, GetOSInfo, Sleep, Impact, Monitor, Analyse, Restore, Remove, \
     DiscoverNetworkServices, DiscoverRemoteSystems, ExploitRemoteService, Misinform

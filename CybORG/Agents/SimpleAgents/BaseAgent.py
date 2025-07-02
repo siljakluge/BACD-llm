@@ -1,4 +1,4 @@
-from CybORG import Results
+from CybORG.Shared import Results
 
 class BaseAgent:
 

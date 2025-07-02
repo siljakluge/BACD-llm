@@ -1,4 +1,4 @@
-from CybORG import BaseAgent
+from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
 from CybORG.Agents.SimpleAgents.SleepAgent import SleepAgent
 from CybORG.Agents.SimpleAgents.B_line import B_lineAgent
 from CybORG.Agents.SimpleAgents.Meander import RedMeanderAgent

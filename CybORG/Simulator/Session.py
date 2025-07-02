@@ -3,7 +3,7 @@
 from ipaddress import IPv4Address
 
 from CybORG.Shared.Enums import SessionType, OperatingSystemType
-from CybORG.Simulator import Entity
+from CybORG.Simulator.Entity import Entity
 
 
 class Session(Entity):
@@ -37,6 +37,7 @@ class Session(Entity):
     def dead_child(self, child_id: int):
         self.children.pop(child_id)
 
+
 class RedAbstractSession(Session):
     # a session that remembers previously seen information that can be used by actions
     def __init__(self, ident: int, host: str, username: str, agent: str,
@@ -57,22 +58,6 @@ class RedAbstractSession(Session):
 
     def addos(self, hostname: str, os: OperatingSystemType):
         self.operating_system[hostname] = os
-
-    # Added debug / print function
-    def print_info(self):
-        print("Red Agent SESSION Information:")
-        print("  Open Ports:")
-        for ip_address, ports in self.ports.items():
-            print(f"    IP Address: {ip_address} - Ports: {', '.join(map(str, ports))}")
-        
-        print("  Operating Systems:")
-        for hostname, os_type in self.operating_system.items():
-            print(f"    Hostname: {hostname} - OS: {os_type.name}")  # Assuming OS type has a 'name' attribute
-
-        if self.ot_service:
-            print("  OT Service: Present")
-        else:
-            print("  OT Service: Not Present")
 
 class GreenAbstractSession(Session):
     # Currently a clone of RedAbstractSession

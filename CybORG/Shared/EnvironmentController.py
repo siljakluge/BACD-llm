@@ -1,16 +1,17 @@
 ## The following code contains work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.
 ## Additionally, we waive copyright and related rights in the utilized code worldwide through the CC0 1.0 Universal public domain dedication.
 
-# Cyborg Environment
 import sys
 import yaml
 
 from CybORG.Shared import Scenario
-from CybORG.Shared.Actions.Action import  InvalidAction
+from CybORG.Shared.Actions.Action import Sleep, InvalidAction
+from CybORG.Shared.Enums import FileType, OperatingSystemType
 from CybORG.Shared.Results import Results
 from CybORG.Shared.Observation import Observation
-from CybORG.Shared.Actions import Action,  Monitor
+from CybORG.Shared.Actions import Action, FindFlag, Monitor
 from CybORG.Shared.AgentInterface import AgentInterface
+import CybORG.Agents
 
 
 class EnvironmentController:
@@ -44,7 +45,6 @@ class EnvironmentController:
         self.subnet_cidr_map = None
         # self.scenario_dict = self._parse_scenario(scenario_path, scenario_mod=scenario_mod)
         scenario_dict = self._parse_scenario(scenario_path)
-        #print(scenario_dict)
         self.scenario = Scenario(scenario_dict)
         self._create_environment()
         self.agent_interfaces = self._create_agents(agents)
@@ -123,6 +123,7 @@ class EnvironmentController:
             else:
                 agent_action = action
             if not self.test_valid_action(agent_action, agent_object) and not skip_valid_action_check:
+
                 agent_action = InvalidAction(agent_action)
             self.action[agent_name] = agent_action
 
@@ -144,12 +145,14 @@ class EnvironmentController:
             # determine reward for agent
             if agent_name == "Blue":
                 reward, avail, confident, decomp = agent_object.determine_reward(next_observation, true_observation,
-                                                                                 self.action, self.done)
+                                                   self.action, self.done)
                 cost = self.action[agent_name].cost
             else:
                 reward = agent_object.determine_reward(next_observation, true_observation,
-                                                       self.action, self.done)
+                                                   self.action, self.done)
             self.reward[agent_name] = reward + self.action[agent_name].cost
+
+
             if agent_name != agent:
                 # train agent using obs, reward, previous observation, and done
                 agent_object.train(Results(observation=self.observation[agent_name].data, reward=reward,
@@ -176,12 +179,10 @@ class EnvironmentController:
         if agent is None:
             result = Results(observation=true_observation, done=self.done)
         else:
-            result = Results(observation=self.observation[agent].data, done=self.done,
-                             reward=round(self.reward[agent], 1),
+            result = Results(observation=self.observation[agent].data, done=self.done, reward=round(self.reward[agent], 1),
                              action_space=self.agent_interfaces[agent].action_space.get_action_space(),
-                             action=self.action[agent], availability=avail, confidentiality=confident,
-                             confidentiality_decomp=decomp,
-                             restore=cost)
+                             action=self.action[agent], availability=avail, confidentiality=confident, confidentiality_decomp= decomp,
+                             restore = cost)
         return result
 
     def execute_action(self, action: Action) -> Observation:

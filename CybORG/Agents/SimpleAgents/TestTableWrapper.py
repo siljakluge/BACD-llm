@@ -1,7 +1,8 @@
 from CybORG import CybORG
 import inspect
 
-from CybORG import B_lineAgent
+from CybORG.Agents import B_lineAgent
+from CybORG.Agents.SimpleAgents.BlueMonitorAgent import BlueMonitorAgent
 from CybORG.Agents.SimpleAgents.KeyboardAgent import KeyboardAgent
 from CybORG.Agents.Wrappers.TrueTableWrapper import TrueTableWrapper
 

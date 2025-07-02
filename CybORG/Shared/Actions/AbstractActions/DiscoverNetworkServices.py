@@ -1,6 +1,6 @@
 from ipaddress import IPv4Address
 
-from CybORG import Observation
+from CybORG.Shared import Observation
 from CybORG.Shared.Actions import Action
 from CybORG.Shared.Actions.ConcreteActions.Portscan import Portscan
 

@@ -1,7 +1,7 @@
 ## The following code contains work of the United States Government and is not subject to domestic copyright protection under 17 USC § 105.
 ## Additionally, we waive copyright and related rights in the utilized code worldwide through the CC0 1.0 Universal public domain dedication.
 import copy
-from datetime import datetime
+from datetime import datetime, timedelta
 from ipaddress import IPv4Network, IPv4Address
 from math import log2
 from random import sample, choice
@@ -9,9 +9,9 @@ from random import sample, choice
 from CybORG.Shared import Scenario
 from CybORG.Shared.Enums import SessionType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import Host
-from CybORG.Simulator import Process
-from CybORG.Simulator import Session
+from CybORG.Simulator.Host import Host
+from CybORG.Simulator.Process import Process
+from CybORG.Simulator.Session import Session
 from CybORG.Simulator.Subnet import Subnet
 
 
@@ -107,7 +107,6 @@ class State:
         hostname_to_interface = {}
 
         count = 0
-        # IP Adresses are assigned here; Subnets are created here via random assigned CIDR
         # randomly generate subnets cidrs for all subnets in scenario and IP addresses for all hosts in those subnets and create Subnet objects
         # using fixed size subnets (VLSM maybe viable alternative if required)
         maximum_subnet_size = max([scenario.get_subnet_size(i) for i in scenario.subnets])
@@ -141,7 +140,6 @@ class State:
 
         for agent in scenario.agents:
             agent_info = scenario.get_agent_info(agent)
-            #print(agent_info.name)
             self.sessions[agent] = {}
             self.sessions_count[agent] = 0
             # instantiate parentless sessions first
@@ -176,7 +174,6 @@ class State:
 
             for host in self.hosts.values():
                 host.create_backup()
-            #print(self.sessions[agent][0])
 
     def add_session(self, host: str, user: str, agent: str, parent: int, process=None, session_type: str = "shell",
             timeout: int = 0, is_escalate_sandbox: bool = False) -> Session:

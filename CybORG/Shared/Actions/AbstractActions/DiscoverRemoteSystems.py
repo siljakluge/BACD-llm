@@ -1,8 +1,9 @@
 from ipaddress import IPv4Network
 
-from CybORG import Observation
+from CybORG.Shared import Observation
 from CybORG.Shared.Actions import Action
 from CybORG.Shared.Actions.ConcreteActions.Pingsweep import Pingsweep
+
 
 class DiscoverRemoteSystems(Action):
     """
@@ -22,9 +23,7 @@ class DiscoverRemoteSystems(Action):
         # run pingsweep on the target subnet from selected session
         sub_action = Pingsweep(session=self.session, agent=self.agent, subnet=self.subnet, target_session=session)
         obs = sub_action.sim_execute(state)
-        print("Discover Remote System")
-        print(obs)
-        return obs # return observation will all available ip adresses in subnet simulation
+        return obs
 
     def __str__(self):
         return f"{self.__class__.__name__} {self.subnet}"

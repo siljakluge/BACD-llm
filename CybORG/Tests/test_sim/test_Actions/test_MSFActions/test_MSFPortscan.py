@@ -1,7 +1,7 @@
 import inspect
 
 from CybORG import CybORG
-from CybORG import MSFPortscan, SSHLoginExploit, MSFPingsweep, MeterpreterIPConfig, UpgradeToMeterpreter
+from CybORG.Shared.Actions import MSFPortscan, SSHLoginExploit, MSFPingsweep, MeterpreterIPConfig, UpgradeToMeterpreter
 
 
 def test_MSFPortscan():

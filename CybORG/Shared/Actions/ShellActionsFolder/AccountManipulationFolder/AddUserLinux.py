@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import AccountManipulation
+from CybORG.Shared.Actions.ShellActionsFolder.AccountManipulationFolder.AccountManipulation import AccountManipulation
 from CybORG.Shared.Enums import OperatingSystemType
 from CybORG.Shared.Observation import Observation
 

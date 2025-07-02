@@ -9,6 +9,7 @@ from CybORG import CybORG
 from CybORG.Shared.Actions import DiscoverRemoteSystems, DiscoverNetworkServices, ExploitRemoteService, \
     PrivilegeEscalate, Impact, Analyse
 from CybORG.Shared.Enums import TrinaryEnum, FileType, Path
+from CybORG.Tests.EphemeralPort import Win2008EphemeralPort, LinuxEphemeralPort
 from CybORG.Tests.test_sim.test_Acceptance.test_reward_function import security_values, availability_values
 
 import pytest

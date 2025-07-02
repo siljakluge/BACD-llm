@@ -7,9 +7,9 @@ from CybORG.Shared.Actions.MSFActionsFolder.RemoteCodeExecutionFolder.RemoteCode
 # use msf module exploit/windows/smb/ms17_010_eternal_blue, set RHOSTS to target
 # could also change LHOST, LPORT and RPORT (default 139)
 # gives root session
-from CybORG.Shared.Enums import SessionType,  OperatingSystemType
+from CybORG.Shared.Enums import SessionType, ProcessType, ProcessVersion, OperatingSystemType, OperatingSystemPatch
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import User
+from CybORG.Simulator.User import User
 
 
 class MS17_010_PSExec(RemoteCodeExecution):

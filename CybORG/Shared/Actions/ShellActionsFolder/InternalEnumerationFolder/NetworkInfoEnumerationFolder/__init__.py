@@ -1,2 +1,2 @@
 from .IFConfig import IFConfig
-from CybORG.Shared.Actions.ShellActionsFolder.InternalEnumerationFolder.NetworkInfoEnumerationFolder.IPConfig import IPConfig
+from .IPConfig import IPConfig

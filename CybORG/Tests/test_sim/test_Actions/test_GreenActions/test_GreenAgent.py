@@ -3,11 +3,16 @@
 
 # tests need to check that a range of inputs result in the correct changes to the state and return the correct obs
 # tests should establish varying environmental states that results in these actions performing differently
+from ipaddress import IPv4Network, IPv4Address
 
 from CybORG import CybORG
 import inspect
 
 from CybORG.Agents.SimpleAgents.GreenAgent import GreenAgent
+
+from CybORG.Shared.Enums import TrinaryEnum, ProcessType, ProcessState, SessionType
+from CybORG.Tests.EphemeralPort import Win2008EphemeralPort
+import pytest
 
 def test_GreenAgent():
     # Create cyborg environment

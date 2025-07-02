@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import CredentialAccess
+from CybORG.Shared.Actions.ShellActionsFolder.OpenConnectionFolder.CredentialAccessFolder.CredentialAccess import CredentialAccess
 
 
 class BruteForceAccess(CredentialAccess):

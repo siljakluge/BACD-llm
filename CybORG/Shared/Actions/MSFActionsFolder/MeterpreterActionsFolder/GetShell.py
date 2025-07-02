@@ -4,7 +4,7 @@ from ipaddress import IPv4Address
 from CybORG.Shared.Actions.MSFActionsFolder.MeterpreterActionsFolder.MeterpreterAction import MeterpreterAction
 from CybORG.Shared.Enums import OperatingSystemType, SessionType, AppProtocol
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.State import State
 
 
 # Call shell from a meterpreter session - gives a shell session

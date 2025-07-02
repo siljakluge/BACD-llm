@@ -1,5 +1,6 @@
 # Copyright DST Group. Licensed under the MIT license.
 import string
+from ipaddress import IPv4Address
 import random
 
 from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import MSFAction, lo

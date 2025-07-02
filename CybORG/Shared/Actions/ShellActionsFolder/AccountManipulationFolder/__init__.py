@@ -1,6 +1,6 @@
 from .AddUserWindows import AddUserWindows
-from CybORG.Shared.Actions.ShellActionsFolder.AccountManipulationFolder.AddUserLinux import AddUserLinux
-from CybORG.Shared.Actions.ShellActionsFolder.AccountManipulationFolder.DisableUserWindows import DisableUserWindows
+from.AddUserLinux import AddUserLinux
+from .DisableUserWindows import DisableUserWindows
 from .DisableUserLinux import DisableUserLinux
-from CybORG.Shared.Actions.ShellActionsFolder.AccountManipulationFolder.RemoveUserFromGroupWindows import RemoveUserFromGroupWindows
+from .RemoveUserFromGroupWindows import RemoveUserFromGroupWindows
 from .RemoveUserFromGroupLinux import RemoveUserFromGroupLinux

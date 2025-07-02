@@ -3,7 +3,7 @@
 
 # tests need to check that a range of inputs result in the correct changes to the state and return the correct obs
 # tests should establish varying environmental states that results in these actions performing differently
-from ipaddress import IPv4Network
+from ipaddress import IPv4Network, IPv4Address
 
 from CybORG import CybORG
 import inspect
@@ -13,7 +13,7 @@ from CybORG.Shared.Actions import PrivilegeEscalate, Impact
 from CybORG.Shared.Actions.AbstractActions.DiscoverNetworkServices import DiscoverNetworkServices
 from CybORG.Shared.Actions.AbstractActions.DiscoverRemoteSystems import DiscoverRemoteSystems
 from CybORG.Shared.Actions.AbstractActions.ExploitRemoteService import ExploitRemoteService
-from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import  lo
+from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import lo_subnet, lo
 from CybORG.Shared.Enums import TrinaryEnum, ProcessType, ProcessState, SessionType, OperatingSystemType
 from CybORG.Shared.RedRewardCalculator import REWARD_MAX_DECIMAL_PLACES
 from CybORG.Tests.EphemeralPort import Win2008EphemeralPort, PID, LinuxEphemeralPort

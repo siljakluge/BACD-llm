@@ -1,6 +1,8 @@
 from copy import deepcopy
+from pprint import pprint
 from prettytable import PrettyTable
 
+from CybORG.Shared.Enums import TrinaryEnum
 from CybORG.Agents.Wrappers.BaseWrapper import BaseWrapper
 
 class TrueTableWrapper(BaseWrapper):

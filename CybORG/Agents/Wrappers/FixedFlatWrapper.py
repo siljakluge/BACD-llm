@@ -1,6 +1,7 @@
 from datetime import datetime
 
-from CybORG import BaseWrapper
+from CybORG.Agents.Wrappers.BaseWrapper import BaseWrapper
+from CybORG.Shared import Observation
 from CybORG.Shared.Actions import ShellSleep
 from CybORG.Shared.Enums import OperatingSystemType, SessionType, ProcessName, Path, ProcessType, ProcessVersion, \
     AppProtocol, FileType, ProcessState, Vulnerability, Vendor, PasswordHashType, BuiltInGroups, \

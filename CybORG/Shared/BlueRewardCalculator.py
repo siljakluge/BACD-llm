@@ -1,8 +1,9 @@
 from collections import namedtuple
 
-from CybORG import Scenario
+from CybORG.Shared import Scenario
 from CybORG.Shared.RedRewardCalculator import DistruptRewardCalculator, PwnRewardCalculator
 from CybORG.Shared.RewardCalculator import RewardCalculator
+import numpy as np
 
 
 HostReward = namedtuple('HostReward','confidentiality availability')
@@ -43,6 +44,7 @@ class ConfidentialityRewardCalculator(RewardCalculator):
             print("mismatch")
         return reward, subnet_decomp
 
+
     def _calculate_compromised_hosts(self):
         self.subnet_confidentiality = {}  # New: subnet → cumulative value
 
@@ -53,7 +55,6 @@ class ConfidentialityRewardCalculator(RewardCalculator):
             self.subnet_confidentiality[subnet] += -1 * value
             self.compromised_hosts[host] = -1 * value
         return self.subnet_confidentiality
-
 
 class AvailabilityRewardCalculator(RewardCalculator):
     # Calculate punishment for defending agent based on reduction in availability
@@ -70,6 +71,7 @@ class AvailabilityRewardCalculator(RewardCalculator):
         self.impacted_hosts = {}
         reward = -self.disrupt_rc.calculate_reward(current_state, action, agent_observations, done)
         self._calculate_impacted_hosts()
+        #print(reward)
         return reward
 
     def _calculate_impacted_hosts(self):
@@ -106,3 +108,4 @@ class HybridAvailabilityConfidentialityRewardCalculator(RewardCalculator):
             reward_state = HostReward(compromised,impacted)  
                                     # confidentiality, availability
             self.host_scores[host] = reward_state
+

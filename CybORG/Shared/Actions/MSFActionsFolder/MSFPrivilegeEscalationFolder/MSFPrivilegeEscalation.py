@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import MSFAction
+from CybORG.Shared.Actions.MSFActionsFolder import MSFAction
 
 
 class MSFPrivilegeEscalation(MSFAction):

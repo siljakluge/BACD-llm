@@ -1,6 +1,6 @@
 import inspect
 
-from CybORG import BaseWrapper
+from CybORG.Agents.Wrappers.BaseWrapper import BaseWrapper
 from CybORG.Shared import Results
 
 

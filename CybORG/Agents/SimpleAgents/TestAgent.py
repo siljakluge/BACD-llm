@@ -1,4 +1,4 @@
-from CybORG import BaseAgent
+from CybORG.Agents.SimpleAgents.BaseAgent import BaseAgent
 import random
 
 #agent that does random action

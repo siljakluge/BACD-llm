@@ -4,9 +4,9 @@ import copy
 from CybORG.Shared.Actions.ShellActionsFolder.ShellAction import ShellAction
 from CybORG.Shared.Enums import FileType, SessionType, FileVersion, OperatingSystemType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import File
-from CybORG.Simulator import Session
-from CybORG.Simulator import State
+from CybORG.Simulator.File import File
+from CybORG.Simulator.Session import Session
+from CybORG.Simulator.State import State
 
 
 class ShellPrivilegeEscalation(ShellAction):

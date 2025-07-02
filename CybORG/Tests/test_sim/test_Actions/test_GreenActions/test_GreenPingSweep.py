@@ -3,14 +3,16 @@
 
 # tests need to check that a range of inputs result in the correct changes to the state and return the correct obs
 # tests should establish varying environmental states that results in these actions performing differently
+from ipaddress import IPv4Network, IPv4Address
 
 from CybORG import CybORG
 import inspect
 
-from CybORG.Shared.Actions.GreenActions import GreenPingSweep
+from CybORG.Shared.Actions.GreenActions.GreenPingSweep import GreenPingSweep
 from CybORG.Shared.Actions.AbstractActions.Monitor import Monitor
 
-from CybORG.Shared.Enums import TrinaryEnum
+from CybORG.Shared.Enums import TrinaryEnum, ProcessType, ProcessState, SessionType
+from CybORG.Tests.EphemeralPort import Win2008EphemeralPort
 import pytest
 
 @pytest.mark.skip("Not implemented")

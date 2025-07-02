@@ -2,7 +2,7 @@ import pytest
 
 from agent_fixtures import cyborg
 
-from CybORG import HeuristicRed
+from CybORG.Agents import HeuristicRed
 
 agent = HeuristicRed()
 killchain = ['DiscoverRemoteSystems', 'DiscoverNetworkServices', 'ExploitRemoteService','PrivilegeEscalate']

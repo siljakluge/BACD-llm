@@ -4,12 +4,12 @@ from ipaddress import IPv4Address
 from typing import Optional
 
 from CybORG.Shared.Actions.ConcreteActions.ExploitAction import ExploitAction
-from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import lo
-from CybORG.Shared.Enums import  ProcessType,  DecoyType
+from CybORG.Shared.Actions.MSFActionsFolder.MSFAction import lo, lo_subnet
+from CybORG.Shared.Enums import SessionType, ProcessType, OperatingSystemType, DecoyType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import Host
-from CybORG.Simulator import State
-from CybORG.Simulator import Process
+from CybORG.Simulator.Host import Host
+from CybORG.Simulator.State import State
+from CybORG.Simulator.Process import Process
 
 
 class SSHBruteForce(ExploitAction):

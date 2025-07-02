@@ -1,7 +1,7 @@
 import inspect
 
 from CybORG import CybORG
-from CybORG import SleepAgent
+from CybORG.Agents import SleepAgent
 from CybORG.Agents.SimpleAgents.BlueReactAgent import BlueReactRemoveAgent, BlueReactRestoreAgent
 
 from CybORG.Agents.SimpleAgents.Meander import RedMeanderAgent

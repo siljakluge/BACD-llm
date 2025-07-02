@@ -1,13 +1,20 @@
 # Copyright DST Group. Licensed under the MIT license.
 import copy
 import inspect
+from ipaddress import IPv4Network
+from math import log2
+from random import sample, choice
 import yaml
 
 from CybORG import CybORG
+from CybORG.Shared.Actions import FindFlag, ShellSleep, SambaUsermapScript, UpgradeToMeterpreter, MSFEternalBlue, GetShell, \
+    PingSweep
 from CybORG.Shared.Actions.Action import Action
+from CybORG.Shared.Enums import FileType, TrinaryEnum
 from CybORG.Shared.EnvironmentController import EnvironmentController
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Shared.Results import Results
+from CybORG.Simulator.State import State
 
 
 class SimulationController(EnvironmentController):
@@ -18,7 +25,7 @@ class SimulationController(EnvironmentController):
     The main thing this class currently does is parse the scenario file.
     """
     def __init__(self, scenario_filepath: str = None, scenario_mod: dict = None, agents: dict = None, verbose=True):
-        self.state = None # Creates the environment (see below) based off on Scenario (Scenario Dict)
+        self.state = None
         super().__init__(scenario_filepath, scenario_mod=scenario_mod, agents=agents)
 
     def reset(self, agent=None):

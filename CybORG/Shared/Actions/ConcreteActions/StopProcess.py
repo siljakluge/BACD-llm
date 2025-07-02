@@ -1,8 +1,8 @@
-from CybORG import Observation
-from CybORG import ConcreteAction
-from CybORG.Simulator import Host
-from CybORG.Simulator import Process
-from CybORG.Simulator import State
+from CybORG.Shared import Observation
+from CybORG.Shared.Actions.ConcreteActions.ConcreteAction import ConcreteAction
+from CybORG.Simulator.Host import Host
+from CybORG.Simulator.Process import Process
+from CybORG.Simulator.State import State
 
 
 class StopProcess(ConcreteAction):

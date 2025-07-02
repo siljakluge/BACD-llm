@@ -2,9 +2,9 @@
 from ipaddress import IPv4Address, IPv4Network
 
 from CybORG.Shared.Actions.MSFActionsFolder.MSFScannerFolder.MSFScanner import MSFScanner
-from CybORG.Shared.Enums import  SessionType
+from CybORG.Shared.Enums import InterfaceType, SessionType, ProcessType, ProcessVersion, AppProtocol
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.State import State
 
 
 # msf module is post/multi/gather/ping_sweep

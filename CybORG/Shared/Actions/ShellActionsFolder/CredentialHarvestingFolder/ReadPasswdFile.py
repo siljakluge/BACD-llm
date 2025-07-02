@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import CredentialHarvesting
+from CybORG.Shared.Actions.ShellActionsFolder.CredentialHarvestingFolder.CredentialHarvesting import CredentialHarvesting
 from CybORG.Shared.Enums import OperatingSystemType, Path
 from CybORG.Shared.Observation import Observation
 

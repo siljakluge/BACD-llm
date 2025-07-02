@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import Entity
+from CybORG.Simulator.Entity import Entity
 from ipaddress import IPv4Network
 
 

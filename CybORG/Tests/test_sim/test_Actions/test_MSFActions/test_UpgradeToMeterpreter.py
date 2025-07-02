@@ -1,8 +1,11 @@
 import inspect
+from ipaddress import IPv4Address
+
+import pytest
 
 from CybORG import CybORG
-from CybORG import UpgradeToMeterpreter, SSHLoginExploit, MSFPortscan, MSFAutoroute, MSFPingsweep
-from CybORG.Shared.Enums import SessionType
+from CybORG.Shared.Actions import UpgradeToMeterpreter, SSHLoginExploit, MSFPortscan, MSFAutoroute, MSFPingsweep
+from CybORG.Shared.Enums import SessionType, AppProtocol
 from CybORG.Tests.EphemeralPort import LinuxEphemeralPort
 
 

@@ -1,11 +1,13 @@
 from ipaddress import IPv4Address
 
-from CybORG import Observation
+from numpy import True_
+
+from CybORG.Shared import Observation
 from CybORG.Shared.Actions.ConcreteActions.ExploitAction import ExploitAction
 from CybORG.Shared.Enums import ProcessVersion
-from CybORG.Simulator import Host
-from CybORG.Simulator import Process
-from CybORG.Simulator import State
+from CybORG.Simulator.Host import Host
+from CybORG.Simulator.Process import Process
+from CybORG.Simulator.State import State
 
 
 class HarakaRCE(ExploitAction):

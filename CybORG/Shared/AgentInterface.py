@@ -24,7 +24,6 @@ MAX_USERS = 10
 MAX_GROUPS = 10
 MAX_PATCHES = 10
 
-VERBOSE = True
 
 class AgentInterface:
 
@@ -68,8 +67,6 @@ class AgentInterface:
         if isinstance(obs, Observation):
             obs = obs.data
         self.action_space.update(obs, known)
-        #if self.agent_name == "Red" and VERBOSE:
-        #    self.action_space.print_summary()
 
     def set_init_obs(self, init_obs, true_obs):
         if isinstance(init_obs, Observation):
@@ -139,8 +136,14 @@ class AgentInterface:
         return calc
 
     def determine_reward(self, agent_obs: dict, true_obs: dict, action: Action, done: bool) -> float:
-        return self.reward_calculator.calculate_reward(current_state=true_obs, action=action,
+        if self.agent_name == "Blue":
+            rew, avail, confident, decomp = self.reward_calculator.calculate_reward(current_state=true_obs, action=action,                                                     agent_observations=agent_obs, done=done)
+            #print(rew, avail, confident)
+            return rew, avail, confident, decomp
+        else:
+            rew = self.reward_calculator.calculate_reward(current_state=true_obs, action=action,
                                                        agent_observations=agent_obs, done=done)
+        return rew
 
     def get_observation_space(self):
         # returns the maximum observation space for the agent given its action set and the amount of parameters in the environment

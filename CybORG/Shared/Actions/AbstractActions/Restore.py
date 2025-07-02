@@ -1,9 +1,11 @@
 from random import choice
 
-from CybORG import Observation
+from CybORG.Shared import Observation
+from .Monitor import Monitor
 from CybORG.Shared.Actions import Action
 from CybORG.Shared.Actions.ConcreteActions.RestoreFromBackup import RestoreFromBackup
-from CybORG.Simulator import VelociraptorServer
+from CybORG.Simulator.Session import VelociraptorServer
+from CybORG.Shared.Actions.AbstractActions import Monitor
 
 class Restore(Action):
     def __init__(self, session: int, agent: str, hostname: str):

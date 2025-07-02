@@ -1,8 +1,8 @@
-from CybORG import Observation
-from CybORG import ConcreteAction
-from CybORG.Simulator import Host
-from CybORG.Simulator import Session, RedAbstractSession
-from CybORG.Simulator import State
+from CybORG.Shared import Observation
+from CybORG.Shared.Actions.ConcreteActions.ConcreteAction import ConcreteAction
+from CybORG.Simulator.Host import Host
+from CybORG.Simulator.Session import Session, RedAbstractSession
+from CybORG.Simulator.State import State
 
 
 class StopService(ConcreteAction):

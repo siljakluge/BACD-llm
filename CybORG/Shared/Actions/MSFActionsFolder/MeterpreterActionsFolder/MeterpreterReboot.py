@@ -1,8 +1,9 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import MeterpreterAction
-from CybORG.Shared.Enums import  SessionType
+from CybORG.Shared.Actions.MSFActionsFolder.MeterpreterActionsFolder.MeterpreterAction import MeterpreterAction
+from CybORG.Shared.Enums import OperatingSystemType, SessionType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.Process import Process
+from CybORG.Simulator.State import State
 
 
 # Call reboot from a meterpreter session - reboots dict that session is on

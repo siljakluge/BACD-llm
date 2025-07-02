@@ -1,5 +1,6 @@
 import pytest
 import inspect
+from ipaddress import IPv4Address, IPv4Network
 
 from prettytable import PrettyTable
 import numpy as np

@@ -1,10 +1,11 @@
 from CybORG import CybORG
 import inspect
 
-from CybORG import KeyboardAgent
+from CybORG.Agents.SimpleAgents.KeyboardAgent import KeyboardAgent
 from CybORG.Agents.SimpleAgents.GreenAgent import GreenAgent
 from CybORG.Agents.Wrappers.BlueTableWrapper import BlueTableWrapper
 from CybORG.Agents import B_lineAgent
+from CybORG.Agents.SimpleAgents.Meander import RedMeanderAgent
 
 if __name__ == "__main__":
     print("Setup")

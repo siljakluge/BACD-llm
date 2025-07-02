@@ -1,6 +1,6 @@
 from random import choice
 
-from CybORG import Observation
+from CybORG.Shared import Observation
 from .Monitor import Monitor
 from CybORG.Shared.Actions import Action
 from CybORG.Shared.Actions.AbstractActions import Monitor

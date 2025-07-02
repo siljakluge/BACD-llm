@@ -22,7 +22,7 @@ from CybORG.Shared.Actions.ShellActionsFolder.ShellPrivilegeEscalationFolder.She
 # gives a root privileged session as user firefart (which has replaced root user in /etc/passwd file)
 from CybORG.Shared.Enums import FileType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.State import State
 
 
 class DirtyCowPrivilegeEscalation(ShellPrivilegeEscalation):

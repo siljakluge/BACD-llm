@@ -18,8 +18,8 @@ from CybORG.Shared.Actions.ConcreteActions.JuicyPotato import JuicyPotato
 from CybORG.Shared.Actions.ConcreteActions.V4L2KernelExploit import V4L2KernelExploit
 from CybORG.Shared.Enums import (
         OperatingSystemType, TrinaryEnum)
-from CybORG.Simulator import State
-from CybORG.Simulator import Session
+from CybORG.Simulator.State import State
+from CybORG.Simulator.Session import Session
 
 # pylint: disable=too-few-public-methods
 class EscalateActionSelector(ABC):
@@ -65,9 +65,9 @@ class PrivilegeEscalate(Action):
     def __perform_escalate(self, state:State, sessions:List[Session]) -> Tuple[Observation, int]:
         target_session = choice(sessions)
 
-        print(f"""
-        Host {self.hostname} attempting escalate:
-        Session {target_session.__dict__}""")
+        #print(f"""
+        #Host {self.hostname} attempting escalate:
+        #Session {target_session.__dict__}""")
 
         # test if session is in a sandbox
         if target_session.is_escalate_sandbox:

@@ -5,4 +5,4 @@ from .LocalTime import LocalTime
 from .MeterpreterPS import MeterpreterPS
 from .MeterpreterReboot import MeterpreterReboot
 from .SysInfo import SysInfo
-from CybORG.Shared.Actions.MSFActionsFolder.MeterpreterActionsFolder.MeterpreterIPConfig import MeterpreterIPConfig
+from .MeterpreterIPConfig import MeterpreterIPConfig

@@ -1,8 +1,8 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import MeterpreterAction
-from CybORG.Shared.Enums import SessionType
+from CybORG.Shared.Actions.MSFActionsFolder.MeterpreterActionsFolder.MeterpreterAction import MeterpreterAction
+from CybORG.Shared.Enums import SessionType, OperatingSystemType
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.State import State
 
 
 # Call getuid from a meterpreter session - gives the username of the session

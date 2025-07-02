@@ -39,22 +39,6 @@ class ActionSpace:
         self.hostname = {}
         self.agent = {agent: True}
 
-    def print_summary(self):
-        # new method to print summary
-        print("ActionSpace Summary:")
-        print(f"Allowed Subnets: {self.allowed_subnets}")
-        print(f"Subnets: {self.subnet}")
-        print(f"IP Addresses: {self.ip_address}")
-        #print(f"Server Sessions: {self.server_session}")
-        print(f"Client Sessions: {self.client_session}")
-        print(f"Usernames: {self.username}")
-        print(f"Passwords: {self.password}")
-        print(f"Processes: {self.process}")
-        print(f"Ports: {self.port}")
-        print(f"Hostnames: {self.hostname}")
-        #print(f"Agent: {self.agent}")
-        #print(f"Actions: {list(self.actions.keys())}")
-
     def get_name(self, action: int) -> str:
         pass
 
@@ -177,5 +161,3 @@ class ActionSpace:
                             self.server_session[session["ID"]] = known
 
                         self.client_session[session["ID"]] = known
-            
-        #self.print_summary() # New function: Print the contents

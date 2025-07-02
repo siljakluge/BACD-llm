@@ -1,5 +1,5 @@
 # Copyright DST Group. Licensed under the MIT license.
-from CybORG import OpenConnection
+from CybORG.Shared.Actions.ShellActionsFolder.OpenConnectionFolder.OpenConnection import OpenConnection
 
 
 class NetcatConnect(OpenConnection):

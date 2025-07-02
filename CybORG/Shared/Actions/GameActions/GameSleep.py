@@ -2,7 +2,7 @@
 import time
 
 from CybORG.Shared import Observation
-from CybORG.Shared.Actions.GameActions.GameAction import GameAction
+from .GameAction import GameAction
 
 
 class GameSleep(GameAction):

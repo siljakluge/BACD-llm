@@ -1,5 +1,5 @@
 from gym import Env
-from CybORG import BaseWrapper, OpenAIGymWrapper, RedTableWrapper, EnumActionWrapper
+from CybORG.Agents.Wrappers import BaseWrapper, OpenAIGymWrapper, RedTableWrapper, EnumActionWrapper
 
 # corrected BlueTableWrapper
 from .BlueTableWrapper import BlueTableWrapper

@@ -2,7 +2,7 @@
 from CybORG import CybORG
 import inspect
 
-from CybORG import TestAgent
+from CybORG.Agents import TestAgent
 from CybORG.Agents.Wrappers.FixedFlatWrapper import FixedFlatWrapper
 from CybORG.Agents.Wrappers.IntListToAction import IntListToActionWrapper
 from CybORG.Agents.Wrappers.OpenAIGymWrapper import OpenAIGymWrapper

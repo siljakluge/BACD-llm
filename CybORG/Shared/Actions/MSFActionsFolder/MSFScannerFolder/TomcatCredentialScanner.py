@@ -2,9 +2,9 @@
 from ipaddress import IPv4Address
 
 from CybORG.Shared.Actions.MSFActionsFolder.MSFScannerFolder.MSFScanner import MSFScanner
-from CybORG.Shared.Enums import  SessionType, ProcessType, ProcessVersion, AppProtocol
+from CybORG.Shared.Enums import InterfaceType, SessionType, ProcessType, ProcessVersion, AppProtocol
 from CybORG.Shared.Observation import Observation
-from CybORG.Simulator import State
+from CybORG.Simulator.State import State
 
 
 # msf module is auxiliary/scanner/http/tomcat_mgr_login - then set RHOSTS and RPORT

@@ -2,7 +2,8 @@ import pytest
 import inspect
 
 from CybORG import CybORG
-from CybORG import B_lineAgent
+from CybORG.Agents import B_lineAgent
+from CybORG.Shared.Enums import TrinaryEnum
 from CybORG.Shared.Actions import Monitor, DiscoverRemoteSystems
 
 @pytest.fixture

@@ -134,7 +134,7 @@ class EnvironmentController:
 
         # Blue update step.
         # New idea: run the MONITOR action for the Blue agent, and update the observation.
-
+        cost = 0
         # pass training information to agents
         for agent_name, agent_object in self.agent_interfaces.items():
 
@@ -145,8 +145,7 @@ class EnvironmentController:
             if agent_name == "Blue":
                 reward, avail, confident, decomp = agent_object.determine_reward(next_observation, true_observation,
                                                                                  self.action, self.done)
-                # print(avail)
-                # print(confident)
+                cost = self.action[agent_name].cost
             else:
                 reward = agent_object.determine_reward(next_observation, true_observation,
                                                        self.action, self.done)
@@ -181,7 +180,8 @@ class EnvironmentController:
                              reward=round(self.reward[agent], 1),
                              action_space=self.agent_interfaces[agent].action_space.get_action_space(),
                              action=self.action[agent], availability=avail, confidentiality=confident,
-                             confidentiality_decomp=decomp)
+                             confidentiality_decomp=decomp,
+                             restore=cost)
         return result
 
     def execute_action(self, action: Action) -> Observation:

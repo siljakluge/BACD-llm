@@ -75,6 +75,7 @@ if __name__ == "__main__":
             actions = []
             acts = []
             all_observations = []
+            restore_costs = []
             availability_scores = []
             confidentiality_scores = []
             confidentiality_decomps = []
@@ -89,6 +90,7 @@ if __name__ == "__main__":
                     r.append(rew)
                     all_observations.append(observation_tmp)
                     # r.append(result.reward)
+                    restore_costs.append(info["restore"])
                     availability_scores.append(info["availability"])
                     confidentiality_scores.append(info["confidentiality"])
                     confidentiality_decomps.append(info["confidentiality_decomp"])
@@ -493,7 +495,6 @@ shap.summary_plot(
     plot_type="bar",
     class_names=regrouped_labels
 )
-"""
 
 #--------------------------------------------------------------------------------------------------------------------
 # REWARD DECOMPOSITION
@@ -520,7 +521,8 @@ plt.grid(True)
 plt.show()
 
 dict_list = confidentiality_decomps
-
+for i, d in enumerate(dict_list):
+    d["restore"] = restore_costs[i]
 # Step 1: find all keys used in any dict
 all_keys = set()
 for d in dict_list:
@@ -563,4 +565,3 @@ plt.ylabel('Reward value')
 plt.title('Stacked rewards per subnet')
 plt.legend()
 plt.show()
-"""

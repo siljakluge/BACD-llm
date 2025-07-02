@@ -20,6 +20,7 @@ class Results:
                  next_observation=None,
                  action=None,
                  action_name: str = None,
+                 restore: float = None,
                  availability: float = None,
                  confidentiality: float = None,
                  confidentiality_decomp: dict = None):
@@ -34,6 +35,7 @@ class Results:
         self.error = error
         self.error_msg = error_msg
         self.action_name = action_name
+        self.restore = restore
         self.availability = availability
         self.confidentiality = confidentiality
         self.confidentiality_decomp = confidentiality_decomp

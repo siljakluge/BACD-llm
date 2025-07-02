@@ -17,6 +17,7 @@ import matplotlib.pyplot as plt
 from Agents.SHAPWrapper import SHAPWrapper
 
 MAX_EPS = 100 # Adjust the number
+number_steps = 10
 agent_name = 'Blue'
 random.seed(0)
 os.environ['LLM_ENABLED'] = 'True'
@@ -62,7 +63,7 @@ if __name__ == "__main__":
     path = path[:-10] + f'/Shared/Scenarios/{scenario}.yaml'
 
     print(f'using CybORG v{cyborg_version}, {scenario}\n')
-    for num_steps in [100]: #, 50, 100
+    for num_steps in range(number_steps): #, 50, 100
         for red_agent in [RedMeanderAgent]: # B_lineAgent, RedMeanderAgent, SleepAgent
             cyborg = CybORG(path, 'sim', agents={'Red': red_agent})
             wrapped_cyborg = wrap(cyborg)
@@ -198,7 +199,7 @@ for bits in unique_chunks:
     print(bits)
 print(count)
 
-sample = shap.sample(all_observations, 200)
+sample = shap.sample(all_observations, 100)
 explainer = shap.KernelExplainer(wrapper.predict, sample)
 
 i = 42
@@ -498,23 +499,15 @@ shap.summary_plot(
 
 #--------------------------------------------------------------------------------------------------------------------
 # REWARD DECOMPOSITION
-#print(confidentiality_decomps)
-def moving_average(x, window=20):
-    return np.convolve(x, np.ones(window)/window, mode='valid')
+number_episodes = 10
 
-plt.plot(moving_average(availability_scores), label="Availability (Smoothed)")
-plt.plot(moving_average(confidentiality_scores), label="Confidentiality (Smoothed)")
-plt.title("Smoothed Reward Trends")
-plt.xlabel("Step")
-plt.ylabel("Smoothed Reward")
-plt.legend()
-plt.grid(True)
-plt.show()
+plt.plot(availability_scores, label="Availability Penalty")
+plt.plot(confidentiality_scores, label="Confidentiality Penalty")
+plt.plot(restore_costs, label="Restore Penalty")
 
-plt.plot(availability_scores, label="Availability")
-plt.plot(confidentiality_scores, label="Confidentiality")
 plt.title("Reward Components Over Time")
 plt.xlabel("Step")
+plt.xlim(0, number_steps * number_episodes)
 plt.ylabel("Reward")
 plt.legend()
 plt.grid(True)
@@ -560,7 +553,8 @@ for i, key in enumerate(all_keys):
     neg_bottom += neg_values
 
 plt.xlabel('Index')
-plt.xlim(0,500)
+plt.xlim(0, number_steps * number_episodes)
+plt.ylim(-2,0)
 plt.ylabel('Reward value')
 plt.title('Stacked rewards per subnet')
 plt.legend()

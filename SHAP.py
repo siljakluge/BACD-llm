@@ -499,6 +499,8 @@ shap.summary_plot(
 
 #--------------------------------------------------------------------------------------------------------------------
 # REWARD DECOMPOSITION
+
+# numbers of episodes to draw
 number_episodes = 10
 
 plt.plot(availability_scores, label="Availability Penalty")

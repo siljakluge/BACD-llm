@@ -573,6 +573,17 @@ if rew_decomp:
         plt.bar(x, neg_values, width=1.2, bottom=neg_bottom, color=colors[i % len(colors)], label=key)
         neg_bottom += neg_values
 
+    if number_episodes_plot > 1:
+        episode_boundaries = []
+        for i in range(number_episodes_plot):
+            episode_boundaries.append(i * number_steps)
+        # Plot vertical lines, label only the first one
+        for i, x_pos in enumerate(episode_boundaries):
+            if i == 0:
+                plt.axvline(x=x_pos, color='black', linestyle='--', linewidth=1, label='Episode boundary')
+            else:
+                plt.axvline(x=x_pos, color='black', linestyle='--', linewidth=1)
+
     plt.xlabel('Index')
     plt.xlim(0, number_steps * number_episodes_plot)
     plt.ylim(-2,0)
